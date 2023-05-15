@@ -1,8 +1,8 @@
-FROM node:lts-bullseye
+FROM node:lts-bullseye-slim
 SHELL ["bash", "-c"]
 WORKDIR /home/node
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y locales curl git vim less zip unzip \
+RUN apt-get update && apt-get install -y locales curl git vim less unzip \
     iproute2 dnsutils netcat python3-pip sudo postfix
 RUN rm -fr /var/lib/apt/lists/*
 RUN mkfifo /var/spool/postfix/public/pickup
