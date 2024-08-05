@@ -14,5 +14,5 @@ RUN chown -R node. /usr/local/lib/node_modules \
  && chown -R :node /usr/local/share && chmod -R g+w /usr/local/share
 
 USER node
-RUN npm i -g npm@latest && npm version | xargs
+RUN npm version | xargs
 COPY --chown=node:staff mail .
