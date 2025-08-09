@@ -1,7 +1,7 @@
 FROM node:lts-bookworm-slim
 SHELL ["bash", "-c"]
 WORKDIR /home/node
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends locales curl git vim less unzip \
     iproute2 dnsutils netcat-openbsd python3-pip sudo postfix \
  && apt-get clean && rm -fr /var/lib/apt/lists/*
