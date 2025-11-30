@@ -1,4 +1,4 @@
-FROM node:lts-trixie-slim
+FROM node:lts-bookworm-slim
 SHELL ["bash", "-c"]
 WORKDIR /home/node
 ENV DEBIAN_FRONTEND=noninteractive
